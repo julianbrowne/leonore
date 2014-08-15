@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="../javascripts/Clock.js"></script>
+	<script src="../javascripts/Backdrop.js"></script>
+	<script src="../javascripts/SVGView.js"></script>
+	<script src="../javascripts/Shape.js"></script>
+	<script src="../javascripts/Line.js"></script>
+	<script src="../javascripts/Path.js"></script>
+	<script src="../javascripts/Filter.js"></script>
+	<script src="../javascripts/Gradient.js"></script>
+	<script src="../javascripts/Animator.js"></script>
+	<script src="../javascripts/utils.js"></script>
+	<script src="../javascripts/shape_defaults.js"></script>
+
+	<script src="javascripts/test.js"></script>
+	<script src="javascripts/script.js"></script>
+
+	<link type="text/css" rel="stylesheet" href="stylesheets/style.css" media="screen" />
+	<title>Leonore: Test SVG</title>
+</head>
+<body>
+
+	<div class="wrapper">
+
+		<form name="settings">
+			Shape:
+				<select name="shape">
+					<option value="circle" selected="selected">Circle</option>
+					<option value="rect">Rectangle</option>
+					<option value="ellipse">Ellipse</option>
+				</select>
+			&nbsp;|&nbsp;
+			Line:
+				<select name="line">
+					<option value="line">Line</option>
+					<option value="polygon">Polygon</option>
+					<option value="polyline">Polyline</option>
+					<option value="path">Path</option>
+				</select>
+		</form>
+
+		<div id="animarea"></div>
+
+		<div id="cpanel0" class="cpanel">
+			<h2>View</h2>
+			<button onclick="clearAndReset(canvas);">clear</button>
+		</div>
+
+		<div id="cpanel1" class="cpanel">
+			<h2>Shape</h2>
+			<button onclick="shapeRand()">random</button>
+			<button onclick="shapeBlitz()">blitz</button>
+			<button onclick="compoundShape()">group</button>
+			<button onclick="imageRand(canvas)">image</button>
+		</div>
+
+		<div id="cpanel2" class="cpanel">
+			<h2>Motion</h2>
+			<button onclick="clock.start();">start</button>
+			<button onclick="clock.stop()">stop</button>
+		</div>
+
+		<div id="cpanel3" class="cpanel">
+			<h2>Line</h2>
+			<button onclick="lineRand()" >random</button>
+			<button onclick="lineBlitz()">blitz</button>
+		</div>
+
+		<div id="footer">
+			<form name="lenses">
+				Gaussian Filter: <input type="checkbox" name="filter">
+				&nbsp;|&nbsp;
+				Linear Gradient: <input type="checkbox" name="lineargradient">
+				&nbsp;|&nbsp;
+				Radial Gradient: <input type="checkbox" name="radialgradient">
+			</form>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+
+body { 
+	background: #9C9C74;
+	margin: 0;
+	padding: 0;
+}
+
+.wrapper {
+	margin: 20px 50px;
+}
+
+h2 {
+	color: navy;
+	font-family: Tahoma, Arial, Helvetica, sans-serif; 
+	font-size: 12px;
+	font-weight: bold;
+}
+
+#animarea
+{
+	background: #D1D1B5;
+	border: #222 1px solid;
+}
+
+#animarea, svg { 
+	float: right;
+	width: 1000px;
+	height: 800px;
+}
+
+.cpanel {
+	background: #D1D19A;
+	border: #222 1px solid;
+	width: 100px;
+	text-align: center;
+	margin: 5px;
+	padding: 5px;	
+}
+
+#cpanel1
+{
+	top: 50px;
+	left: 10px;
+}
+
+#cpanel2
+{
+	top: 235px;
+	left: 10px;
+}
+
+#cpanel3
+{
+	top: 350px;
+	left: 10px;
+}
+
+#footer
+{
+	position: absolute;
+	bottom: 5px;
+	width: 100%;
+	text-align: center;
+}
+
+button { 
+	display: inline-block;
+	font-size: 14px;
+	line-height: 16px;
+	font-family: courier;
+	width: 80px;
+}

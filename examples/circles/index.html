@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="../../lib/ext/require.js"></script>
+    <script src="../../lib/loader.js"></script>
+    <link type="text/css" rel="stylesheet" href="../assets/stylesheets/style.css" media="screen" />
+    <title>Leonore: Example</title>
+</head>
+<body>
+    <script>
+        Leonore.onload = function() { 
+            var backdrop = new Backdrop('svg', 'circles');
+            var circle = new Circle();
+            circle.radius(20);
+            circle.x(10);
+            circle.y(10);
+            circle.color('red');
+            backdrop.addShape(circle);
+        };
+    </script>
+</body>
+</html>

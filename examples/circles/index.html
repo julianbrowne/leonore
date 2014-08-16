@@ -7,16 +7,28 @@
     <title>Leonore: Example</title>
 </head>
 <body>
+    <h1>Circles, circles, everywhere</h1>
+    <button onclick="draw()">draw</button>
+    <button onclick="backdrop.empty()">clear</button>
+    <div id="circles"></div>
     <script>
-        Leonore.onload = function() { 
-            var backdrop = new Backdrop('svg', 'circles');
+
+        var backdrop;
+
+        Leonore.useGlobals();
+
+        Leonore.onload(function() { backdrop = new Backdrop('svg', 'circles'); });
+
+        function draw() { 
             var circle = new Circle();
             circle.radius(20);
-            circle.x(10);
-            circle.y(10);
-            circle.color('red');
+            var pos = backdrop.randXY();
+            circle.position(pos);
+            var col = backdrop.randomColor();
+            circle.color(col);
             backdrop.addShape(circle);
         };
+
     </script>
 </body>
 </html>

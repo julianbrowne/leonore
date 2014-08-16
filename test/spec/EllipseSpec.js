@@ -4,8 +4,7 @@ describe("Ellipse", function() {
   var shape;
 
   beforeEach(function() { 
-    var l = new Leonore();
-    shape = new l.Ellipse();
+    shape = new Leonore.Ellipse();
   });
 
   it("should have Leonore class", function() { 
@@ -13,8 +12,7 @@ describe("Ellipse", function() {
   });
 
   it("should have an Ellipse class", function() { 
-    var l = new Leonore();
-    expect(l.Ellipse).toBeDefined();    
+    expect(Leonore.Ellipse).toBeDefined();    
   });
 
   it("shape should exist", function() { 

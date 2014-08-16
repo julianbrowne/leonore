@@ -1,12 +1,10 @@
 
 describe("Defaults", function() { 
 
-  var leonore;
   var defaults;
 
   beforeEach(function() { 
-    leonore = new Leonore();
-    defaults = leonore.defaults;
+    defaults = Leonore.defaults;
   });
 
   it("should have Leonore class", function() { 
@@ -14,7 +12,7 @@ describe("Defaults", function() {
   });
 
   it("should have a defaults function", function() { 
-    expect(leonore.defaults).toBeDefined();    
+    expect(Leonore.defaults).toBeDefined();    
   });
 
   it("should reject an unknown shape", function() { 
@@ -24,7 +22,7 @@ describe("Defaults", function() {
 
   it("should make a default circle", function() { 
     var config = defaults('circle');
-    var shape = new leonore.Circle(config);
+    var shape = new Leonore.Circle(config);
     expect(shape).toBeDefined();
     expect(shape.type).toEqual('circle');
     expect(shape.x()).toEqual(50);
@@ -33,7 +31,7 @@ describe("Defaults", function() {
 
   it("should make a default rectangle", function() { 
     var config = defaults('rect');
-    var shape = new leonore.Rectangle(config);
+    var shape = new Leonore.Rectangle(config);
     expect(shape).toBeDefined();
     expect(shape.type).toEqual('rect');
     expect(shape.get('width')).toEqual('30');

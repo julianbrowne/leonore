@@ -4,8 +4,7 @@ describe("Clock", function() {
   var clock;
 
   beforeEach(function() { 
-    var l = new Leonore();
-    clock = new l.Clock();
+    clock = new Leonore.Clock();
   });
 
   it("should have Leonore class", function() { 
@@ -13,8 +12,7 @@ describe("Clock", function() {
   });
 
   it("should have a Clock class", function() { 
-    var l = new Leonore();
-    expect(l.Clock).toBeDefined();    
+    expect(Leonore.Clock).toBeDefined();    
   });
 
   it("timer should exist", function() { 
@@ -22,10 +20,9 @@ describe("Clock", function() {
   });
 
   it("timer should set default interval", function() { 
-    var l = new Leonore();
-    var c1 = new l.Clock(5000);
+    var c1 = new Leonore.Clock(5000);
     expect(c1.interval).toEqual(5000);    
-    var c2 = new l.Clock();
+    var c2 = new Leonore.Clock();
     expect(c2.interval).toEqual(1000);    
   });
 

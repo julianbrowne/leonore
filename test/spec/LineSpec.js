@@ -5,17 +5,17 @@ describe("Line", function() {
   var svg_settings;
 
   beforeEach(function() { 
-    leonore = new Leonore();
+
   });
 
   it("should exist", function() { 
-    expect(leonore).toBeDefined();
-    expect(leonore.Backdrop).toBeDefined();    
-    expect(leonore.Line).toBeDefined();    
+    expect(Leonore).toBeDefined();
+    expect(Leonore.Backdrop).toBeDefined();    
+    expect(Leonore.Line).toBeDefined();    
   });
 
   it("should make a line", function() { 
-    var line = new leonore.Line();
+    var line = new Leonore.Line();
     expect(line).toBeDefined();
     expect(line.type).toEqual('line');
   });

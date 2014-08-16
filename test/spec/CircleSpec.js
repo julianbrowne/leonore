@@ -4,8 +4,7 @@ describe("Circle", function() {
   var shape;
 
   beforeEach(function() { 
-    var l = new Leonore();
-    shape = new l.Circle();
+    shape = new Leonore.Circle();
   });
 
   it("should have Leonore class", function() { 
@@ -13,8 +12,7 @@ describe("Circle", function() {
   });
 
   it("should have a Circle class", function() { 
-    var l = new Leonore();
-    expect(l.Circle).toBeDefined();    
+    expect(Leonore.Circle).toBeDefined();    
   });
 
   it("shape should exist", function() { 
@@ -23,6 +21,13 @@ describe("Circle", function() {
 
   it("should make a circle", function() { 
     expect(shape.type).toEqual('circle');
+  });
+
+  it("should make a circle with correct radius", function() { 
+    shape.radius(50);
+    expect(shape.radius()).toEqual(50);
+    shape.radius(100);
+    expect(shape.radius()).toEqual(100);
   });
 
   it("should make new circle with random forces", function() { 

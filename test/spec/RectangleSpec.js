@@ -4,8 +4,7 @@ describe("Rectangle", function() {
   var shape;
 
   beforeEach(function() { 
-    var l = new Leonore();
-    shape = new l.Rectangle();
+    shape = new Leonore.Rectangle();
   });
 
   it("should have Leonore class", function() { 
@@ -13,8 +12,7 @@ describe("Rectangle", function() {
   });
 
   it("should have a Rectangle class", function() { 
-    var l = new Leonore();
-    expect(l.Rectangle).toBeDefined();    
+    expect(Leonore.Rectangle).toBeDefined();    
   });
 
   it("shape should exist", function() { 

@@ -8,9 +8,11 @@
 </head>
 <body>
     <a href="../">examples</a>
-    <h1>Circles, circles, everywhere</h1>
+    <h1>Hip to be square</h1>
     <button onclick="draw()">draw</button>
     <button onclick="backdrop.empty()">clear</button>
+    <label for="width">width</label>: <input id="width" value="10"/>
+    <label for="height">height</label>: <input id="height" value="10"/>
     <div id="example"></div>
     <script>
 
@@ -21,13 +23,15 @@
         Leonore.onload(function() { backdrop = new Backdrop('svg', 'example'); });
 
         function draw() { 
-            var circle = new Circle();
-            circle.radius(20);
-            var pos = backdrop.randXY();
-            circle.position(pos);
+            var rect = new Rectangle();
+            var width = document.getElementById('width').value;
+            var height = document.getElementById('height').value;
+            rect.dimensions({height: height, width: width});
             var col = backdrop.randomColor();
-            circle.color(col);
-            backdrop.addShape(circle);
+            rect.color(col);
+            var pos = backdrop.randXY();
+            rect.position(pos);
+            backdrop.addShape(rect);
         };
 
     </script>

@@ -10,6 +10,7 @@
     <a href="../">examples</a>
     <h1>Circles, circles, everywhere</h1>
     <button onclick="draw()">draw</button>
+    <button onclick="splat()">splat</button>
     <button onclick="backdrop.empty()">clear</button>
     <div id="example"></div>
     <script>
@@ -29,6 +30,8 @@
             circle.color(col);
             backdrop.addShape(circle);
         };
+
+        function splat() { for(var i=0; i<= 100; i++) draw(); };
 
     </script>
 </body>

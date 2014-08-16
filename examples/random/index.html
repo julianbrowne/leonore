@@ -8,12 +8,10 @@
 </head>
 <body>
     <a href="../">examples</a>
-    <h1>Hip to be square</h1>
+    <h1>Anything Goes ..</h1>
     <button onclick="draw()">draw</button>
     <button onclick="splat()">splat</button>
     <button onclick="backdrop.empty()">clear</button>
-    <label for="width">width</label>: <input id="width" value="10"/>
-    <label for="height">height</label>: <input id="height" value="10"/>
     <div id="example"></div>
     <script>
 
@@ -24,18 +22,23 @@
         Leonore.onload(function() { backdrop = new Backdrop('svg', 'example'); });
 
         function draw() { 
-            var rect = new Rectangle();
-            var width = document.getElementById('width').value;
-            var height = document.getElementById('height').value;
-            rect.dimensions({height: height, width: width});
-            var col = backdrop.randomColor();
-            rect.color(col);
+            var shapeClass = shapes[Math.floor(Math.random()*shapes.length)];
+            var shape = new shapeClass();
+            shape.width(20);
+            shape.height(20);
+
             var pos = backdrop.randXY();
-            rect.position(pos);
-            backdrop.addShape(rect);
+            shape.position(pos);
+
+            var col = backdrop.randomColor();
+            shape.color(col);
+
+            backdrop.addShape(shape);
         };
 
-        function splat() { for(var i=0; i<= 100; i++) draw(); };
+        function splat() {
+            for(var i=0; i<= 100; i++) draw();
+        }
 
     </script>
 </body>
